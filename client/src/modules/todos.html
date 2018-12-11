@@ -1,3 +1,9 @@
 <template>
-	<h1>${message}</h1>
+
+    <h1>${message}</h1>
+    <!-- <button click.trigger="newTodo()">New Todo</button>  -->
+    <compose show.bind="showTodoEditForm" view="./components/editTodo.html">
+    </compose>
+    <compose show.bind="!showTodoEditForm" view="./components/tableTodos.html">
+    </compose>
 </template>
